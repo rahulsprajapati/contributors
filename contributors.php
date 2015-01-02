@@ -47,7 +47,7 @@ function add_contributors_meta_box_content() {
 	foreach ( $blogusers as $user ) {
 		
 		$flag = 0;
-		if ($contributors [0] != "") {
+		if (!empty($contributors)) {
 			if (in_array ( $user->ID, $contributors )) {
 				$flag = 1;
 			}
