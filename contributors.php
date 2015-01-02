@@ -84,10 +84,10 @@ add_filter ( 'the_content', 'add_after_post_content' );
 // Add list of selected contributors at the end of post
 function add_after_post_content($content) {
 	global $post;
-	$values = get_post_custom ( $post->ID );
+	
 	$contributors = get_post_meta ( $post->ID, 'contributors' );
 	$contributors = explode ( ',', $contributors [0] );
-	$login_user_id = get_current_user_id ();
+	
 	$blogusers = get_users ();
 	
 	$content .= "<div> <label><strong>Contributors : </strong></label>";
