@@ -7,7 +7,7 @@
 * **License:** [GPL v2 or later] (http://www.gnu.org/licenses/gpl-2.0.html)
 
 ## Description ##
-	This is One Wordpress Plugin, Which is use for display more than one author name with their gravatars on post.
+	This is One Wordpress Plugin, Which is use for display more than one author name with their gravatars on post. 
 	
 ## Installation ##
 1. Download Plugin. 
@@ -29,6 +29,8 @@
 3. Here bydefault the login user(author) checkbox is checked. 
 
 4. After Publish the post you will see all checked author names with their gravatars below the post.
+
+5. Here You can see the author page by click on the author name & read all other post of that author.
 
 
 Thank You...
