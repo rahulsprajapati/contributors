@@ -2,7 +2,7 @@
 
   Version:  1.0.0
 
-* **Author:** [Rahul Prajapti] (http://resume.developerrahul.com)
+* **Author:** [Rahul Prajapati] (http://resume.developerrahul.com)
 
 * **License:** [GPL v2 or later] (http://www.gnu.org/licenses/gpl-2.0.html)
 
