@@ -22,6 +22,12 @@ function contributors() {
 	add_action ( 'save_post', 'add_contributors_meta_box_save' );
 }
 
+add_action ( 'wp_enqueue_scripts', 'contributors_script' );
+function contributors_script() {	
+	wp_enqueue_style ( 'contributors_style', plugins_url ( 'lib/css/style.css', __FILE__ ), array (), null, 'all' );
+}
+
+
 // Add Option in Setting Menu
 function contributors_menu() {
 	echo "<div class='warp'><h1>Contributors Settings</h1><hr/></div>";
@@ -90,7 +96,7 @@ function add_after_post_content($content) {
 	
 	$blogusers = get_users ();
 	
-	$content .= "<div> <label><strong>Contributors : </strong></label>";
+	$content .= "<div class='contributors'> <label><strong>Contributors : </strong></label>";
 	
 	foreach ( $blogusers as $user ) {
 		$flag = 0;
@@ -100,7 +106,7 @@ function add_after_post_content($content) {
 		}
 		
 		if ($flag == 1) {
-			$content .= "<span class='author vcard'><a class='url fn n'  href='" . get_author_posts_url ( $user->ID ) . "' title='View all posts by " . esc_html ( $user->display_name ) . "' > " . get_avatar ( $user->ID, 32 ) . " " . esc_html ( $user->display_name ) . "</a></span> ";
+			$content .= "<span class='author vcard contributor'><a class='url fn n'  href='" . get_author_posts_url ( $user->ID ) . "' title='View all posts by " . esc_html ( $user->display_name ) . "' > " . get_avatar ( $user->ID, 32 ) . " " . esc_html ( $user->display_name ) . "</a></span> ";
 		}
 	}
 	

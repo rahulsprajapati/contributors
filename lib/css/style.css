@@ -1,0 +1,14 @@
+.contributors {
+	margin: 10px !important;
+}
+.contributor {
+	margin: 5px !important;
+}
+.contributor a{
+	text-decoration: none  !important;
+	border: 0px  !important;
+}
+
+.contributor a img{
+	display: inline-block !important;
+}
